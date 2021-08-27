@@ -750,11 +750,11 @@ function getJxFactory() {
                                     infoMsg = `${$.jxProductName} ,进度:${((production.investedElectric / production.needElectric) * 100).toFixed(2)}%`;
                                     if (production.investedElectric >= production.needElectric) {
                                         if (production['exchangeStatus'] === 1) {
-                                            infoMsg = `${$.productName} ,已经可兑换，请手动兑换`;
+                                            infoMsg = `${$.jxProductName} ,已经可兑换，请手动兑换`;
                                         }
                                         if (production['exchangeStatus'] === 3) {
                                             if (new Date().getHours() === 9) {
-                                                infoMsg = `${$.productName} ,兑换已超时，请选择新商品进行制造`;
+                                                infoMsg = `${$.jxProductName} ,兑换已超时，请选择新商品进行制造`;
                                             }
                                         }
                                         // await exchangeProNotify()
@@ -762,7 +762,7 @@ function getJxFactory() {
                                         infoMsg += ` ,预计:${((production.needElectric - production.investedElectric) / (2 * 60 * 60 * 24)).toFixed(2)}天可兑换`
                                     }
                                     if (production.status === 3) {
-                                        infoMsg = "${$.productName} ,已经超时失效, 请选择新商品进行制造"
+                                        infoMsg = "${$.jxProductName} ,已经超时失效, 请选择新商品进行制造"
                                     }
                                 } else {
                                     $.unActive = false;//标记是否开启了京喜活动或者选购了商品进行生产
