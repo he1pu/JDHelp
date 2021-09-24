@@ -1,8 +1,10 @@
 /**
- * 强制更新
- * cron=0 0-23/12 * * *
- */
 
+cron=0 0-23/12 * * * jd_update.js
+
+new Env('强制更新');
+
+ */
 const exec = require('child_process').exec;
 
 exec("cd /ql/repo/JDHelp_jd_scripts; git fetch --all; git reset --hard origin/main; git pull", (error, stdout, stderr) => {
