@@ -104,7 +104,7 @@ async function main() {
         ""
     }
     let taskId = task_vos.task_id, taskType = task_vos.task_type;
-   if(product_info_vos ！= ){
+   if(product_info_vos != null ){
      for (let t of product_info_vos) {
        if (t.status === '1') {
          console.log(`开始任务：${task_vos.task_name}`)
